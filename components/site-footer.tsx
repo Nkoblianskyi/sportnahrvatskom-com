@@ -9,16 +9,14 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <svg className="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <h3 className="text-lg font-serif font-bold uppercase tracking-wide">
+            <Link href="/" className="flex items-center gap-3 group">
+              <Image src="/favicon.ico" alt="Logo" width={50} height={50} />
+              <span className="text-2xl font-serif font-bold uppercase tracking-wide transition-transform duration-300 group-hover:scale-105">
                 <span className="text-[#FF0000]">SPORT</span>
                 <span className="text-foreground">NA</span>
                 <span className="text-[#0D5EAF]">HRVATSKOM</span>
-              </h3>
-            </div>
+              </span>
+            </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Vaš premijerni vodič za elitne online kladionice u Hrvatskoj. Profesionalne recenzije i detaljne
               usporedbe.
