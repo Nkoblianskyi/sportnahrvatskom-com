@@ -12,15 +12,7 @@ export function HeroSection({ onTopOffersClick, onAdvertiserInfoClick, onAgeRest
   const formattedDate = `${currentDate.toLocaleString("hr-HR", { month: "long" })} ${currentDate.getFullYear()}`
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 text-center overflow-hidden bg-secondary">
-      <div className="absolute inset-0">
-        <Image
-          src="/croatian-football-stadium-atmosphere-with-red-and-.jpg"
-          alt="Hrvatski sportski stadion"
-          fill
-          className="object-cover opacity-20"
-        />
-      </div>
+    <section className="relative py-12 sm:py-16 md:py-20 text-center overflow-hidden">
 
       <div className="container mx-auto px-4 relative z-10">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mb-2 sm:mb-3 animate-fade-in-up text-secondary-foreground">

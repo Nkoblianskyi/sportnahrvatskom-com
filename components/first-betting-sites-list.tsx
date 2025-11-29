@@ -44,7 +44,7 @@ export function FirstBettingSitesList() {
   }
 
   return (
-    <section id="first-rankings" className="py-8 sm:py-12 w-full bg-background">
+    <section id="first-rankings" className="py-4 sm:py-4 w-full ">
       <div className="w-full max-w-[1080px] mx-auto">
         <div className="px-4 sm:px-6">
           <div className="space-y-4 sm:space-y-5">
