@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light luxury color scheme - cream, gold, navy */
+    --background: 45 30% 98%;
+    --foreground: 220 25% 15%;
+
+    --card: 45 25% 96%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 45 30% 98%;
+    --popover-foreground: 220 25% 15%;
+
+    --primary: 38 75% 55%;
+    --primary-foreground: 220 25% 15%;
+
+    --secondary: 220 45% 35%;
+    --secondary-foreground: 45 30% 98%;
+
+    --muted: 45 15% 92%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 38 75% 55%;
+    --accent-foreground: 220 25% 15%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 88%;
+    --input: 45 25% 96%;
+    --ring: 38 75% 55%;
+
+    --chart-1: 38 75% 55%;
+    --chart-2: 220 45% 35%;
+    --chart-3: 45 30% 98%;
+    --chart-4: 220 15% 45%;
+    --chart-5: 38 85% 65%;
+
+    --radius: 0.5rem;
+    /* </CHANGE> */
+
+    --sidebar: 0 100% 40%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 211 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 100% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 100% 85%;
+    --sidebar-ring: 0 100% 40%;
+  }
+
+  .dark {
+    --background: 220 25% 12%;
+    --foreground: 45 25% 95%;
+    --card: 220 25% 15%;
+    --card-foreground: 45 25% 95%;
+    --popover: 220 25% 15%;
+    --popover-foreground: 45 25% 95%;
+    --primary: 38 75% 55%;
+    --primary-foreground: 220 25% 15%;
+    --secondary: 220 45% 45%;
+    --secondary-foreground: 45 30% 98%;
+    --muted: 220 20% 20%;
+    --muted-foreground: 45 15% 65%;
+    --accent: 38 75% 55%;
+    --accent-foreground: 220 25% 15%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 25%;
+    --input: 220 20% 20%;
+    --ring: 38 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: url("/croatian-football-stadium-atmosphere-with-red-and-.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+@layer utilities {
+  .section-transparent {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-in-out;
+  }
+
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+
+  /* Removed gradient-based animations */
+  .animate-glow {
+    animation: glow 2s infinite;
+  }
+  /* </CHANGE> */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Simplified glow animation without gradients */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.6);
+  }
+}
+/* </CHANGE> */
